@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características | ARM'$</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- NAVEGADOR -->
+        <nav class="nav_main">
+            <img src="./img/logo.jpg" href="#" alt="Logo" class="foto_nav" >
+            <ul class="nav_menu">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="novedades.html">Novedades</a>
+                </li>
+                <li>
+                    <a href="equipo.html">Equipo</a>
+                </li>
+            </ul>
+            <ul class="nav_menu_right"> 
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <hr>
+
+        <!-- CUERPO -->
+        <h1 class="titulo">Características</h1><br>
+        <div>
+
+            <!-- DIAGRAMA -->
+            <div class="diagrama">
+                <h2 class="subtitulo">Diagrama en bloques</h2><br>
+                <img src="./img/diagrama.jpg" alt="" class="img_dia">
+                <div class="col4">
+                    <div class="1de4">
+                        <hgroup>
+                            <h3>Comunicación</h3><br>
+                            <p style="text-align: justify;">El dispositivo se comunicará con la PC del usuario a través del módulo WiFi, este será el ESP8266. Utilizaremos el microcontrolador KL25, que nos brinda el colegio. El módulo WiFi le transmite la posición en la que debe estar el brazo instante a instante. Tanto el micro como el ESP utiliza una tensión de alimentación de3,3V.</p>
+                        </hgroup>
+                    </div>
+                    <div class="2de4">
+                        <hgroup>
+                            <h3>Bloque Kinect</h3><br>
+                            <p style="text-align: justify;"> El bloque Kinect, hace referencia al sensor de movimiento que utilizaremos. Tiene su propia alimentación de 12V, se conecta con la PC por medio de un cable USB. La PC a la que se conecta el Kinect tendrá la App Interfaz de Usuario (el manual de instrucciones será explicado luego).</p>
+                        </hgroup>
+                    </div>
+                    <div class="3de4">
+                        <hgroup>
+                            <h3>Bloque de alimentación</h3><br>
+                            <p style="text-align: justify;">El bloque de alimentaciones será el encargado de al recibir 12v externos preparar las distintas |	tensiones para poder alimentar el resto de los bloques.</p>
+                        </hgroup>
+                    </div>
+                    <div class="4de4">
+                        <hgroup>
+                            <h3>Actuadores e interfaz</h3><br>
+                            <p style="text-align: justify;">El brazo en concreto lleva los servomotores que realizarán los movimientos ordenados, pero para la adaptación de estos actuadores con la placa KL25, contaremos con una etapa de potencia. Los objetivos de esta son poder brindar la corriente requerida mediante circuitos transistorizados y otorgar las alimentaciones que corresponden, ya que el micro-controlador nos da 3,3V y los actuadores requieren 5V.</p>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CIRCUITO -->
+            <div class="circuito">
+                <br><br><h2 class="subtitulo">Circuito</h2><br>
+                <img src="./img/CIRCUITO.jpg" alt="" class="img_cir">
+                <div class="col4">
+                    <div class="1de4">
+                        <hgroup>
+                            <h3>Salidas y entradas del micro controlador</h3><br>
+                            <p style="text-align: justify;">El siguiente circuito contiene las entradas y salidas del microcontrolador con las conexiones marcadas con nets. Salidas de 3,3v
+                            </p>
+                        </hgroup>
+                    </div>
+                    <div class="2de4">
+                        <hgroup>
+                            <h3>Pulsadores</h3><br>
+                            <p style="text-align: justify;">Los pulsadores son tres, dos para ir hacia izquierda y derecha para el Display LCD y el restante para ON/OFF. Se alimenta con 3.3V de Alimentaciones de 3,3V</p>
+                        </hgroup>
+                    </div>
+                    <div class="3de4">
+                        <hgroup>
+                            <h3>ESP8266</h3><br>
+                            <p style="text-align: justify;">El ESP8266 es el módulo de comunicación Wi-Fi, en el siguiente circuito realizamos las conexiones necesarias para su funcionamiento:</p>
+                        </hgroup>
+                    </div>
+                    <div class="4de4">
+                        <hgroup>
+                            <h3>Alimenta motores</h3><br>
+                            <p style="text-align: justify;">El siguiente circuito consiste en la alimentación de los motores</p>
+                        </hgroup>
+                    </div>
+                </div>
+
+                <div class="col3">
+                    <div class="1de3">
+                        <hgroup>
+                            <h3>Distribución de tensión</h3><br>
+                            <p style="text-align: justify;">Esta sección se encarga de generar dos salidas de 5v con una entrada Jack de 12v. La razón por la que usamos dos salidas de 5v es porque una va para las alimentaciones de los motores (Vcc/mot) y la otra salida a las restantes alimentaciones. Esto es así para evitar generar ruido entre los componentes y los motores.</p>
+                        </hgroup>
+                    </div>
+                    <div class="1de3">
+                        <hgroup>
+                            <h3>Motores</h3><br>
+                            <p style="text-align: justify;">El circuito de los motores es igual para todos. En la base del primer transistor está una salida del microcontrolador, que entrega 3,3v. Para lograr que los motores se alimenten con 5v y tengan la corriente que necesiten se los conecta a dos transistores con su diodo de protección. </p>
+                        </hgroup>
+                    </div>
+                    <div class="1de3">
+                        <hgroup>
+                            <h3>Display LCD</h3><br>
+                            <p style="text-align: justify;">La ficha J2 son conectores machos que va conectada al Display mediante cables. El componente funciona con 5V, por lo que utilizamos transistores para alimentar con 5v. Pusimos la carga sobre el emisor para que no invierta cuando la base reciba un “0” o un “1” lógico.</p>
+                        </hgroup>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BANNER INFERIOR -->
+        <div class="banner_sec">
+            <h4>Empresa</h4>
+            <p>Conocé más sobre ARM$</p>
+            <a href="#" class="btn">Ver más <i class="fas fa-angle-double-right"></i></a>
+        
+        </div> 
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="pie">
+        <h5>
+            Derechos reservados
+        </h5>
+        <footer class="footer">
+            <ul class="lista_1">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="novedades.html">Novedades</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-search"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="lista_2">
+                <li>
+                    <a href="#">Contacto:</a>
+                </li>
+                <li>
+                    <a href="#">ngorostiaga29@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#">11 2345-9452</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/place/Yapey%C3%BA+197,+C1202+ACC,+Buenos+Aires/@-34.6144834,-58.4240152,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca5948fd80af:0xaf3e0662d0a083ed!8m2!3d-34.6144878!4d-58.4218265">Yapeyú 197</a>
+                </li>
+            </ul>
+            <ul class="lista_3">
+                <li>
+                    <a href="#">Empresa</a>
+                </li>
+                <li>
+                    <a href="#">Invertí en ARM'$</a>
+                </li>
+                <li>
+                    <a href="#">Directores</a>
+                </li>
+                <li>
+                    <a href="#">Oferta de trabajo</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- LINK JS -->
+    <script src="app.js"></script>
+
+</body>
+</html>
